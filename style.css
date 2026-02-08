@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+i {
+  color: #fec654;
+}
+
+/* ===
+    Header Section
+    ===*/
+
+.header {
+  width: 100vw;
+  height: 30vh;
+  background-image: url("./assets/andre-tan-THJJRUhNlEc-unsplash.jpg");
+  background-position: 40% 20%;
+  background-size: cover;
+}
+
+.header-text,
+.link {
+  color: white;
+}
+
+.header-text {
+  font-size: 2.75rem;
+}
+
+header a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.header-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ===
+    Form Section
+    ===*/
+
+.input-wrapper {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  top: -20px;
+  position: relative;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 2.5rem;
+  border: 1px solid gray;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 2px 2px 5px black;
+}
+
+button {
+  padding: 0.75rem 2.5rem;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid grey;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px black;
+}
+
+.mag-glass {
+  position: relative;
+  top: 12px;
+  left: 30px;
+  color: #111827;
+}
+
+/* ===
+    Movie Section
+    === */
+#search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.movie {
+  display: flex;
+  gap: 2rem;
+}
+
+.movie:not(:last-child) {
+  border-bottom: 1px solid grey;
+  padding: 0 0 30px 0;
+}
+
+.movie-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.movie-title-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.addlist-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.movie img {
+  width: 100px;
+  object-fit: cover;
+}
+
+.watchlist {
+  color: #111827;
+  cursor: pointer;
+}
+
+/* ===
+    Media Queries
+    ===*/
+
+@media (width > 768px) {
+  #search-results {
+    width: 75%;
+    margin: 2rem auto;
+  }
+}
+
+@media (width > 992px) {
+  #search-results {
+    width: 60%;
+    margin: 2rem auto;
+  }
+}
