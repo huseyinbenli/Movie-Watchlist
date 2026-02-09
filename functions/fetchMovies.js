@@ -14,20 +14,17 @@ export async function fetchMovies(e) {
     `https://www.omdbapi.com/?s=${movieName}&apikey=5318b514`,
   );
   const data = await response.json();
-  console.log(data);
   if (!data.Search) {
     searchResultsEl.innerHTML = "<p>No movies found 😢</p>";
     return;
   }
-  console.log(data.Search);
 
   for (const movies of data.Search) {
     const response = await fetch(
       `https://www.omdbapi.com/?t=${movies.Title}&apikey=5318b514`,
     );
     const movie = await response.json();
-    console.log(movie);
 
-    renderMovies(movie);
+    searchResultsEl.innerHTML += renderMovies(movie);
   }
 }
