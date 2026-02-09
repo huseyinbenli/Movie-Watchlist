@@ -85,7 +85,8 @@ button {
 /* ===
     Movie Section
     === */
-#search-results {
+#search-results,
+#watchlist {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -124,9 +125,35 @@ button {
   object-fit: cover;
 }
 
-.watchlist {
+.watchlist,
+.remove-watchlist,
+.empty-icon,
+.empty-text {
   color: #111827;
   cursor: pointer;
+}
+
+.empty-text {
+  font-weight: bold;
+  list-style: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.empty-div {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.empty-div p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #dfdddd;
+  margin: 2rem;
+}
+
+.remove {
+  color: red;
 }
 
 /* ===
@@ -134,14 +161,16 @@ button {
     ===*/
 
 @media (width > 768px) {
-  #search-results {
+  #search-results,
+  #watchlist {
     width: 75%;
     margin: 2rem auto;
   }
 }
 
 @media (width > 992px) {
-  #search-results {
+  #search-results,
+  #watchlist {
     width: 60%;
     margin: 2rem auto;
   }
