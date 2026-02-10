@@ -20,5 +20,5 @@ export function saveMovies(e) {
   }
 
   localStorage.setItem("watchlist", JSON.stringify(watchlist));
-  e.target.textContent = "Added";
+  e.target.textContent = "Added to your watchlist";
 }
