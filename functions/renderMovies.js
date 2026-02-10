@@ -12,7 +12,7 @@ export function renderMovies(movie) {
                         <p class="movie-runtime">${movie.Runtime}</p>
                         <p class="movie-genre">${movie.Genre}</p>
                         <div class="watchlist">
-                        <i class="fa-solid fa-circle-plus watchlist"></i>
+                        <i class="fa-solid fa-circle-plus"></i>
                         Watchlist
                         </div>
                     </div>
